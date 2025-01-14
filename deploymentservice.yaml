@@ -18,20 +18,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: regcred
 
-
----
-
-apiVersion: v1
-data:
-  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJvYm9razg4NSIsInBhc3N3b3JkIjoiUUlGZ2pndGI0NTFkYnZqdGtmIiwiZW1haWwiOiJsZWFybmluZy5vYm9ra0BnbWFpbC5jb20iLCJhdXRoIjoiYjJKdmEyczRPRFU2VVVsR1oycG5kR0kwTlRGa1luWnFkR3RtIn19fQ==
-kind: Secret
-metadata:
-  name: regcred
-  namespace: default
-type: kubernetes.io/dockerconfigjson
 
 ---
 
